@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX로 css를 써보자</title>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+<body>
+    <div id ="container"></div>
+    <script type="text/babel">
+        function mainText() {
+
+            const imgstyle ={
+                "max-width": '50%',
+            }
+            const texth1Style ={
+                fontSize: '2em',
+                fontStyle: 'bold',
+                color: 'blue'
+            }
+            const texth2Style ={
+                "font-size": '1em',
+                "font-style": 'bold'
+            }
+            return(
+                <div>
+                     <img src="resouce/DSC00290.JPG" style={imgstyle}/>
+                     <h1 style={texth1Style}>이것은 h1 텍스트 이다.</h1>
+                     <h2 style={texth2Style}>이것은 h2 텍스트 이다.</h2>
+                </div>
+            )
+        }
+        const containers = document.getElementById('container')
+        ReactDOM.render(
+            mainText(),containers
+        )
+
+
+    </script>
+
+</body>
+</html>
